@@ -1,0 +1,10 @@
+{
+  "name": "joeblow",
+  "version": "1.0.0",
+  "lockfileVersion": 1,
+  "scripts": {
+    "sass": "sass --watch ./scss/style.scss:./css/style.css --style compressed",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "browserslist": "last 4 versions"
+}

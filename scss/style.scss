@@ -1,0 +1,449 @@
+@import "partials/animations";
+@import "partials/car";
+@import "partials/hill";
+@import "partials/road";
+@import "partials/sun";
+
+$BackgroundColor: rgb(87, 156, 135);
+$ScripturalColor: rgb(252, 202, 70);
+$Color1: rgb(252, 223, 219);
+$Color2: rgb(255, 245, 254);
+$Color3: rgb(249, 249, 249);
+$Color4: rgb(253, 255, 253);
+$ColorMenu11:#45181F;
+$ColorMenu12:#FF5560;
+$ColorMenu13:#FF8C68;
+$ColorMenu21: #D2700E;
+$ColorMenu22: #AE6598;
+$ColorMenu23: #734DCC;
+$ColorMenu31: #002EDD;
+$ColorMenu32: #0071F4;
+$ColorMenu33: #009EFA;
+$ColorMenu41:#0A993F;
+$ColorMenu42:#A9FF7C;
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.header{
+  background-color: $BackgroundColor;
+  width:100;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  &_h1{
+    color: $ScripturalColor;
+  }
+}
+
+.footer{
+  background-color: $BackgroundColor;
+  width:100%;
+  height: 3em;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  &_sec{
+    color: $ScripturalColor;
+    padding: 0 2em 0 2em;
+  }
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &_menus {
+    display: flex;
+    flex-direction: row;
+    &_menu{
+      box-shadow: 0.1em 0.1em 1em #aaa;
+      border-radius: 10px;
+      margin: 2em;
+      width: 15em;
+      height: 20em;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      &--1{
+        background-color: $Color1;
+        &--Titre{
+          color: $ColorMenu11;
+          font-family: 'Devonshire', cursive;
+        }
+        &--Menu{
+          color: $ColorMenu11;
+          font-family: 'Bad Script', cursive;
+        }
+        &--large{
+          width: 35em;
+          height: 40em;
+          background-color: $Color1;
+          margin-bottom: 5em;
+        }
+      }
+      &--2{
+        background-color: $Color2;
+        &--Titre{
+          font-family: 'Croissant One', cursive;
+          background: linear-gradient(to right, $ColorMenu21 0%, $ColorMenu22 50%, $ColorMenu23 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &--Menu{
+          color: $ColorMenu21;
+          font-family: 'Abril Fatface', cursive;
+        }
+        &--large{
+          width: 35em;
+          height: 40em;
+          background-color: $Color2;
+          margin-bottom: 5em;
+        }
+      }
+      &--3{
+        background-color: $Color3;
+        &--Titre{
+          font-family: 'Dancing Script', cursive;
+          background: linear-gradient(to right, $ColorMenu31 0%, $ColorMenu32 50%, $ColorMenu33 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &--Menu{
+          color: $ColorMenu31;
+          font-family: 'Bad Script', cursive;
+        }
+        &--large{
+          width: 35em;
+          height: 40em;
+          background-color: $Color3;
+          margin-bottom: 5em;
+        }
+      }
+      &--4{
+        background-color: $Color4;
+        &--Titre{
+          font-family: 'Kaushan Script', cursive;
+          background: linear-gradient(to right, $ColorMenu41 0%, $ColorMenu42 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &--Menu{
+          color: $ColorMenu41;
+          font-family: 'Bad Script', cursive;
+        }
+        &--large{
+          width: 35em;
+          height: 40em;
+          background-color: $Color4;
+          margin-bottom: 5em;
+        }
+      }
+    }
+  }
+  &_button {
+    background-color: $BackgroundColor;
+    color: $ScripturalColor;
+    bottom:0;
+    margin-bottom: 5em;
+    border-radius: 10px;
+    padding:0.5em 1em 0.5em 1em;
+    &:hover + .point--1{
+      transform: translate(0em, 0.5em);
+    }
+  } 
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.zoom{
+  text-align: left;
+  padding-right: 1em;
+  padding-left: 1em;
+  transition-property: all;
+  transition-duration: 400ms;
+  &:hover{
+    transform:scale(1.2);
+    opacity:70%;
+  }
+}
+
+table{
+  margin:auto;
+}
+
+td{
+  text-align: center;
+}
+
+#menu1html{
+  font-family: 'Devonshire', cursive;
+}
+
+#menu2html{
+  font-family: 'Croissant One', cursive;
+}
+
+#menu3html{
+  font-family: 'Dancing Script', cursive;
+}
+
+#menu4html{
+  font-family: 'Kaushan Script', cursive;
+}
+
+#MentionsLégales{
+  margin: 3em;
+}
+
+.inline{
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.stop-color11{
+  stop-color: $ColorMenu12;
+}
+
+.stop-color12{
+  stop-color: $ColorMenu13;
+}
+
+.svg1{
+  width: auto;
+  height: 50px;
+}
+
+.svg1petit{
+  width: auto;
+  height: 30px;
+}
+
+.color11{
+  color:$ColorMenu11;
+  fill:$ColorMenu11;
+}
+
+.color2{
+  background: linear-gradient(to right, $ColorMenu21 0%, $ColorMenu22 70%, $ColorMenu23 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.color21{
+  color:$ColorMenu21;
+  fill:$ColorMenu21;
+}
+
+.color22{
+  color:$ColorMenu22;
+  fill:$ColorMenu22;
+}
+
+.color23{
+  color:$ColorMenu23;
+  fill:$ColorMenu23;
+}
+
+.color3{
+  background: linear-gradient(to right, $ColorMenu31 0%, $ColorMenu33 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.color31{
+  color:$ColorMenu31;
+  fill:$ColorMenu31;
+}
+
+.color32{
+  color:$ColorMenu32;
+  fill:$ColorMenu32;
+}
+
+.color33{
+  color:$ColorMenu33;
+  fill:$ColorMenu33;
+}
+
+.color4{
+  background: linear-gradient(to right, $ColorMenu41 0%, $ColorMenu42 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stop-color41{
+  stop-color: $ColorMenu41;
+}
+
+.stop-color42{
+  stop-color: $ColorMenu42;
+}
+
+.color41{
+  fill: linear-gradient(to right, $ColorMenu41 0%, $ColorMenu42 100%);
+}
+
+.color42{
+  fill: linear-gradient(to right, $ColorMenu42 0%, $ColorMenu41 100%);
+}
+
+/* TEST */
+$prog-bar-dur: 1s;
+$prog-bar-delay: 1s;
+
+.underline{
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: progress-underline $prog-bar-dur $prog-bar-delay;
+  animation-fill-mode: forwards;
+  background-color: black;
+  color: black;
+  height:3px;
+  width:100%;
+}
+
+@keyframes progress-underline{
+  from{
+    transform: scaleX(0);
+  }
+  to{
+    transform: scaleX(1);
+  }
+}
+
+/// TEST souslignement sous titre ///
+$thick : 3px;
+$pad : 0.7em;
+$extra : calc(#{$pad} * 1.2);
+$color : #f26522;
+
+
+.portfolio-experiment {
+  a {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      transition: 
+        transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
+        right 0.2s cubic-bezier(.04,.48,0,1) 0.6s,
+        left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
+      transform-origin: left;
+    }
+
+  }
+  
+  .back1{
+    background: $ColorMenu11;
+  }
+
+  .back21{
+    background: $ColorMenu21;
+  }
+
+  .back22{
+    background: $ColorMenu22;
+  }
+
+  .back23{
+    background: $ColorMenu23;
+  }
+
+  .back31{
+    background: $ColorMenu31;
+  }
+
+  .back32{
+    background: $ColorMenu32;
+  }
+
+  .back33{
+    background: $ColorMenu33;
+  }
+
+  .back4{
+    background: $ColorMenu41;
+  }
+
+  .line {
+    position: absolute;
+
+    &.-bottom {
+      height: $thick;
+      left: -$thick;
+      right: -$thick;
+      transform: scale3d(0,1,1);
+      bottom: -$thick;
+      transition: transform 0.3s cubic-bezier(1,0,.65,1.01);
+      transform-origin: right;
+    }  
+  }
+
+  a:hover,
+  a:active {
+
+    &:after {
+      transform: scale3d(0,1,1);
+      right: -$thick;
+      left: -$thick;
+      transform-origin: right;
+      transition: 
+        transform 0.2s cubic-bezier(1,0,.65,1.01),
+        right 0.2s cubic-bezier(1,0,.65,1.01),
+        left 0s 0.3s;
+    }
+
+    .line {
+      transform: scale3d(1,1,1);
+
+      &.-bottom {
+        transition: transform 0.5s cubic-bezier(0,.53,.29,1);
+        transform-origin: left;
+      }
+    }
+
+  }
+}
+
+/// Fin TEST souslignement sous titre ///
+
+/// TEST bandes left et right test ///
+img{
+  width:100%;
+  height:auto;
+}
+
+.nowrap{
+  white-space: nowrap;
+}
+
+tr{
+  width:240px;
+}
+
+td{
+  padding:  0px !important;
+}
+
+image{
+  fill:black !important;
+}
+
+//// Fin TEST bandes left et right ///
