@@ -22,151 +22,116 @@
 
 /// Points de suspension
 
-@keyframes bounceUp {
+@keyframes Rebond {
 	0% {
 	  transform: translate3d(0px, 0px, 0px);
-	  opacity: 1;
 	}
 	50% {
 	  transform: translate3d(0px, 1px, 0px);
-	  opacity: 1;
 	}
 	80% {
 	  transform: translate3d(0px, -3px, 0px);
-	  opacity: 1;
 	}
 	100% {
 	  transform: translate3d(0px, 0px, 0px);
-	  opacity: 1;
 	}
 }
 
-.sentence span {
-	opacity: 1;
-	position: relative;
-	display: inline-block;
-  }
-.sentence span.active1 {
-	animation: bounceUp 1s ease 0ms infinite normal both;
-}
-.sentence span.active2 {
-	animation: bounceUp 1s ease 200ms infinite normal both;
-}
-.sentence span.active3 {
-	animation: bounceUp 1s ease 400ms infinite normal both;
-}
-
-/////////////AUTRE
 .sentence p {
-	opacity: 1;
 	position: relative;
 	display: inline-block;
   }
 .sentence p.active1 {
-	animation: bounceUp 1s ease 0ms infinite normal both;
+	animation: Rebond 1s ease 0ms infinite normal both;
 }
 .sentence p.active2 {
-	animation: bounceUp 1s ease 200ms infinite normal both;
+	animation: Rebond 1s ease 200ms infinite normal both;
 }
 .sentence p.active3 {
-	animation: bounceUp 1s ease 400ms infinite normal both;
+	animation: Rebond 1s ease 400ms infinite normal both;
 }
 // Soulignement 
 
-$thick : 2px;
-$pad : 0.7em;
-$extra : calc(#{$pad} * 1.2);
-$color : #f26522;
+$epaisseur : 2px;
+
+.back1{
+  background: $ColorMenu11;
+}
+
+.back21{
+  background: $ColorMenu21;
+}
+
+.back22{
+  background: $ColorMenu22;
+}
+
+.back23{
+  background: $ColorMenu23;
+}
+
+.back31{
+  background: $ColorMenu31;
+}
+
+.back32{
+  background: $ColorMenu32;
+}
+
+.back33{
+  background: $ColorMenu33;
+}
+
+.back4{
+  background: $ColorMenu41;
+}
 
 h4{
   margin:0;
   padding:0;
 }
 
-.portfolio-experiment {
+.parent-soulignement {
   h4 {
     position: relative;
-
-    &:after {
-      position: absolute;
-      content: '';
-      transition: 
-        transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
-        right 0.2s cubic-bezier(.04,.48,0,1) 0.6s,
-        left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
-      transform-origin: left;
-    }
-
-  }
-  
-  .back1{
-    background: $ColorMenu11;
-  }
-
-  .back21{
-    background: $ColorMenu21;
-  }
-
-  .back22{
-    background: $ColorMenu22;
-  }
-
-  .back23{
-    background: $ColorMenu23;
-  }
-
-  .back31{
-    background: $ColorMenu31;
-  }
-
-  .back32{
-    background: $ColorMenu32;
-  }
-
-  .back33{
-    background: $ColorMenu33;
-  }
-
-  .back4{
-    background: $ColorMenu41;
-  }
-
-  .line {
-    position: absolute;
-
-    &.-bottom {
-      height: $thick;
-      left: -$thick;
-      right: -$thick;
-      transform: scale3d(0,1,1);
-      bottom: -$thick;
-      transition: transform 0.3s cubic-bezier(1,0,.65,1.01);
-      transform-origin: right;
-    }  
-  }
-
-  h4:hover,
-  h4:active {
-
-    &:after {
-      transform: scale3d(0,1,1);
-      right: -$thick;
-      left: -$thick;
-      transform-origin: right;
-      transition: 
-        transform 0.2s cubic-bezier(1,0,.65,1.01),
-        right 0.2s cubic-bezier(1,0,.65,1.01),
-        left 0s 0.3s;
-    }
-
-    .line {
-      transform: scale3d(1,1,1);
-
-      &.-bottom {
+    &:hover {
+      .line-bottom {
+        transform: scale3d(1,1,1);
         transition: transform 0.5s cubic-bezier(0,.53,.29,1);
         transform-origin: left;
       }
     }
-
   }
+
+  .line-bottom {
+    position: absolute;
+    height: $epaisseur;
+    left: -$epaisseur;
+    right: -$epaisseur;
+    transform: scale3d(0,1,1);
+    bottom: -$epaisseur;
+    transition: transform 0.3s cubic-bezier(1,0,.65,1.01);
+    transform-origin: right;  
+  }
+}
+
+//Zoom
+
+.parent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &:hover > .child{
+    transform: scale(1.2);
+    opacity: 80%;
+  }
+}
+
+.child{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease-in-out;
 }

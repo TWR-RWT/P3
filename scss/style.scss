@@ -8,14 +8,6 @@
   stop-color: $ColorMenu42;
 }
 
-.color41{
-  fill: linear-gradient(to right, $ColorMenu41 0%, $ColorMenu42 100%);
-}
-
-.color42{
-  fill: linear-gradient(to right, $ColorMenu42 0%, $ColorMenu41 100%);
-}
-
 /// NOUVEAU CSSSSSSSSSSSSSSSSSSSSSSSS ///
 
 //Addition-> Variables + animation wiggle
@@ -233,6 +225,22 @@ body {
     stop-color: $ColorMenu13;
   }
 
+  .stop-color21{
+    stop-color: $ColorMenu21;
+  }
+  
+  .stop-color23{
+    stop-color: $ColorMenu23;
+  }
+
+  .stop-color31{
+    stop-color: $ColorMenu31;
+  }
+  
+  .stop-color33{
+    stop-color: $ColorMenu33;
+  }
+
   // Mentions légales //
 
   .MentionsLégales{
@@ -435,24 +443,7 @@ body {
 
 /// Nouveau 3 //
 
-.parent{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  &:hover > .child{
-    transform: scale(1.2);
-    opacity: 80%;
-  }
-}
 
-.child{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: all .3s ease-in-out;
-}
 
 .MenuP{
   display:flex;
