@@ -1,3 +1,4 @@
+@import "partials/colors";
 @import "partials/animations";
 
 .stop-color41{
@@ -175,10 +176,10 @@ body {
       margin-top:4px;
     }
     &--2{
-      background: linear-gradient(to right, $ColorMenu21 0%, $ColorMenu22 50%, $ColorMenu23 100%);
+//      background: linear-gradient(to right, $ColorMenu21 0%, $ColorMenu22 50%, $ColorMenu23 100%);
 //      background-image: linear-gradient(to right, $ColorMenu21 0%, $ColorMenu22 50%, $ColorMenu23 100%);
-      background-clip: text;
-      color: transparent;
+//      background-clip: text;
+//      color: transparent;
       text-anchor:middle;//
 //        -webkit-background-clip: text;
 //        -moz-background-clip: text;
@@ -187,24 +188,24 @@ body {
       font-size:11px;
     }
     &--3{
-      background: linear-gradient(to right, $ColorMenu31 0%, $ColorMenu32 50%, $ColorMenu33 100%);
-      background-clip: text;
-      color: transparent;
+//      background: linear-gradient(to right, $ColorMenu31 0%, $ColorMenu32 50%, $ColorMenu33 100%);
+//      background-clip: text;
+//      color: transparent;
       font-family: 'Dancing Script', cursive;
       text-anchor:middle;//
       font-size:15px;
     }
     &--4{
-      background: linear-gradient(to right, $ColorMenu41 0%, $ColorMenu42 100%);
-      background-clip: text;
-      color: transparent;
+//      background: linear-gradient(to right, $ColorMenu41 0%, $ColorMenu42 100%);
+//      background-clip: text;
+//      color: transparent;
       justify-content: center;
       text-anchor:middle;//
       font-size:15px;
     }
   }
 
-  //svg1 (SVG)
+  //SVG
 
   .svg1haut{
     width: auto;
@@ -215,6 +216,29 @@ body {
   .svg1bas{
     width: auto;
     height: 20px;
+  }
+
+  .CarteSVG{
+    fill-rule: evenodd; 
+    stroke-width: 0px;
+    &--ID1{
+      fill: url(#gradient-1);
+    }
+    &--ID2{
+      fill: url(#gradient-2);
+    }
+    &--ID3{
+      fill: url(#gradient-3);
+    }
+    &--ID4{
+      fill: url(#gradient-4);
+    }
+    &--ID5{
+      fill: url(#gradient-5);
+    }
+    &--ID6{
+      fill: url(#gradient-6);
+    }
   }
 
   .stop-color11{
@@ -470,6 +494,12 @@ body {
   
 }
 
+.SVGC{
+  margin-bottom: -220px;
+  height:250px;
+  width:350px;
+}
+
 .Note{
   width: auto;
   height: 40px;
@@ -615,6 +645,13 @@ ul.LIGNE{
 
   ///Fin Index
   //Carte
+
+  .SVGC{
+    margin-bottom: -175px;
+    height:200px;
+    width:300px;
+  }
+
   .CARTE{
     width:300px;
   }
@@ -732,6 +769,12 @@ ul.LIGNE{
 
   //Fin Index
   //Cartes
+
+  .SVGC{
+    margin-bottom: -400px;
+    height:450px;
+    width:450px;
+  }
 
   .CARTE{
     width:500px;
@@ -952,6 +995,13 @@ ul.LIGNE{
 
     // Fin Index
     // Debut Cartes
+
+    .SVGC{
+      margin-bottom: -450px;
+      height:500px;
+      width:700px;
+    }
+
 
     .CARTE{
       width:720px;
@@ -1196,6 +1246,12 @@ ul.LIGNE{
 
     // Fin Index
     // Debut Cartes
+
+    .SVGC{
+      margin-bottom: -630px;
+      height:700px;
+      width:700px;
+    }
 
     .CARTE{
       width:950px;
@@ -1482,6 +1538,12 @@ ul.LIGNE{
 
     // Fin Index
     // Debut Cartes
+
+    .SVGC{
+      margin-bottom: -725px;
+      height:800px;
+      width:800px;
+    }
 
     .CARTE{
       width:1200px;

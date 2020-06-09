@@ -1,4 +1,4 @@
-@import "./colors";
+
 ///wiggle
 
 .wiggle:hover {
@@ -24,16 +24,16 @@
 
 @keyframes Rebond {
 	0% {
-	  transform: translate3d(0px, 0px, 0px);
+	  transform: translate(0px, 0px);
 	}
 	50% {
-	  transform: translate3d(0px, 1px, 0px);
+	  transform: translate(0px, 1px);
 	}
 	80% {
-	  transform: translate3d(0px, -3px, 0px);
+	  transform: translate(0px, -3px);
 	}
 	100% {
-	  transform: translate3d(0px, 0px, 0px);
+	  transform: translate(0px, 0px);
 	}
 }
 
